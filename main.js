@@ -1,5 +1,5 @@
 const canvas=document.getElementById("myCanvas");
-canvas.height=window.innerHeight;
+//canvas.height=window.innerHeight;
 canvas.width=200;
 
 const ctx = canvas.getContext("2d");
@@ -10,7 +10,8 @@ car.draw(ctx);
 animate();
 
 function animate(){
-    car.update();
+    car.update(road.borders);
+    
     canvas.height=window.innerHeight;
 
     ctx.save();
